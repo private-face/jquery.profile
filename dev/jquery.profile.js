@@ -72,7 +72,7 @@
                     // do not wrap functions marked as 'excluded'
                     && $.inArray(name, this._options.exclude) === -1
                     // exclude constructors and private jQuery methods
-                    && !name.match(/[A-Z_]/)
+                    && !name.match(/^[A-Z_]/)
                     ) {
                     this.wrapFn($, name, '$.' + name);
                 }
