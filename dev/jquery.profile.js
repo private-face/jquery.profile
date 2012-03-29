@@ -190,7 +190,7 @@
         _generateHeader: function(total, isFF) {
             var f = this._formatStr;
             var preSpaces = isFF ? ' ' : '  ';
-            return '[Profilerr] Total profiled jQuery time: ' + total + 'ms' + 
+            return '[Profiler] Total profiled jQuery time: ' + total + 'ms' + 
                    '\n' + preSpaces + f("Name", NAME) + f("Time", TIME) + f('Calls', CALLS) + (isFF ? 'Top callers' : '');
         },
         _ffRenderer: function(a) {
