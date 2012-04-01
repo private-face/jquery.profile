@@ -33,8 +33,8 @@
 
     Profiler.prototype = {
         constructor: Profiler,
-        _EXCLUDE_FN: ['constructor', 'init', 'ready', 'push', 'sort', 'splice'], // to be contunued...
-        _EXCLUDE_$: ['ready'],
+        _EXCLUDE_FN: ['constructor', 'init', 'ready', 'push', 'sort', 'splice', 'each'], // to be contunued...
+        _EXCLUDE_$: ['ready', 'each'],
         _DEFAULTS: {
             exclude: [],
             accumulateStats: false,
