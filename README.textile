@@ -4,25 +4,24 @@ jQuery.profile allows you to track every $(...), $.*, $.fn.* call.
 
 h2. Usage
 
-<pre><code>
-	// 1. Create new profiler
-	var profile = new $.Profile();
+<pre><code>// 1. Create new profiler
+var profiler = new $.Profiler();
 
-	// 2. Start profiling
-	profile.start();
+// 2. Start profiling
+profiler.start();
 
-	/*
-	 * code to be profiled goes here
-	 */
+/*
+ * code to be profiled goes here
+ */
 
-	// 3. Stop profiling
-	profile.stop();
+// 3. Stop profiling
+profiler.stop();
 
-	// 4. View profilier report
-	// ordered by time
-	profile.topTime();
-	// or ordered by calls
-	profile.topCalls();
+// 4. View profilier report
+// ordered by time
+profiler.topTime();
+// or ordered by calls
+profiler.topCalls();
 </code></pre>
 
 h2. License
