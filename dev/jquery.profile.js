@@ -207,11 +207,9 @@
                         str.push(callersSpacer);
                     }
                     str.push(f(a[i].callers[j].time + 'ms', TIME), a[i].callers[j].fn);
-                    if (j !== k) {
-                        str.push('\n');
-                    }
+                    log.apply(this, str);
+                    str = [];
                 }
-                log.apply(this, str);
             }
             log.groupEnd(groupLabel);
         },
