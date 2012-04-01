@@ -163,10 +163,11 @@
                 oldFn = parentObj[name];
 
             var newFn = function() {
-                var res, time;
+                var res, time, caller;
                 // TODO: DRY!
                 if (self._started && self._currentFn === null) {
-                    self._startFunctionTracking(globalName, oldFn, arguments.callee.caller);
+                    caller = arguments.callee.caller || "(program)";
+                    self._startFunctionTracking(globalName, oldFn, caller);
                     res = oldFn.apply(this, arguments);
                     self._stopFunctionTracking(globalName);
                 } else {
